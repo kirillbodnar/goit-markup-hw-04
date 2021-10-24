@@ -5,6 +5,7 @@
   --main-background-color: #e5e5e5;
   --secondary-background-color: #2f303a;
   --thirdly-background-color: #f5f4fa;
+  --icons-color: #afb1b8;
 }
 
 p,
@@ -121,16 +122,24 @@ body {
 .nav-contacts {
   display: flex;
   margin-left: auto;
+  justify-content: center;
+  align-items: center;
 }
 
-.nav-contacts .link {
-  display: block;
-  padding-top: 21px;
-  padding-bottom: 21px;
+.header-icon {
+  margin-right: 10px;
 }
 
 .nav-contacts .item + .item {
   margin-left: 50px;
+}
+
+.nav-contacts .link {
+  display: flex;
+  fill: currentColor;
+  vertical-align: middle;
+  justify-content: center;
+  align-items: center;
 }
 
 .nav-mail {
@@ -159,12 +168,35 @@ body {
   color: var(--accent-color);
 }
 
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
 /* -------------------main-------------------------- */
 
 .hero-section {
   text-align: center;
   padding-bottom: 210px;
   padding-top: 200px;
+}
+
+.overlay {
+  max-width: 1600px;
+  height: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #c4c4c4;
+  background-image: linear-gradient(
+      to right,
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url("../images/hero-img.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .hero {
@@ -206,6 +238,22 @@ body {
 
 .hero-section {
   background-color: var(--secondary-background-color);
+}
+
+.icon-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+
+  height: 120px;
+  width: 270px;
+  background-color: var(--thirdly-background-color);
+  border-radius: 4px;
+}
+
+.icon-box svg {
+  display: flex;
 }
 
 .section1 {
@@ -275,10 +323,6 @@ body {
   background-color: white;
 }
 
-.card-align :not(:last-child) {
-  margin-bottom: 10px;
-}
-
 .card-align {
   padding-top: 30px;
   padding-bottom: 30px;
@@ -308,6 +352,7 @@ body {
 
 .section3-title {
   text-align: center;
+  margin-bottom: 10px;
 
   font-weight: 500;
   font-size: 16px;
@@ -318,11 +363,55 @@ body {
 
 .section3-text {
   text-align: center;
+  margin-bottom: 16px;
 
   font-weight: normal;
   font-size: 16px;
   line-height: 1.19;
   letter-spacing: 0.03em;
+}
+
+.social-list {
+  display: flex;
+  justify-content: center;
+}
+
+.social-item {
+  width: 44px;
+  height: 44px;
+  margin-right: 10px;
+}
+
+.social-item:last-child {
+  margin-right: 0px;
+}
+
+.social-link {
+  width: 100%;
+  height: 100%;
+  display: block;
+  border-radius: 50%;
+
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.social-link:hover,
+.social-link:focus {
+  background-color: var(--accent-color);
+}
+
+.social-link:hover .social-icon,
+.social-link:focus .social-icon {
+  fill: currentColor;
+}
+
+.social-icon {
+  width: 20px;
+  height: 20px;
+  fill: #afb1b8;
 }
 
 .visually-hidden {
@@ -337,6 +426,53 @@ body {
   clip-path: inset(50%);
   margin: -1px;
 }
+
+.section4-header {
+  margin-bottom: 50px;
+
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--main-title-color);
+}
+
+.company-list {
+  display: flex;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.company-list .item {
+  width: 170px;
+  height: 92px;
+  margin-right: 30px;
+}
+
+.company-icon {
+  fill: #afb1b8;
+}
+
+.company-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 92px;
+  width: 170px;
+  border: 1px solid var(--icons-color);
+  border-radius: 4px;
+  color: var(--icons-color);
+}
+
+.company-link:hover .company-icon .company-link:focus .company-icon {
+  fill: var(--accent-color);
+}
+
+.company-link:hover .company-link:focus {
+  border-color: var(--accent-color);
+}
+
 /* -------------------footer-------------------------- */
 
 .logo3 {
@@ -470,4 +606,23 @@ body {
 
 .help-card-list .item:nth-child(n + 7) {
   margin-bottom: 0;
+}
+
+.footer-social-title {
+  font-size: 14px;
+  line-height: 1.14;
+  line-height: 100%;
+  text-align: Left;
+  vertical-align: Top;
+  letter-spacing: 0.03em;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+.footer-items {
+  display: flex;
+}
+
+.footer-inf {
+  margin-right: 70px;
 }
