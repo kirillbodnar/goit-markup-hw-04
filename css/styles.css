@@ -465,11 +465,13 @@ img {
   color: var(--icons-color);
 }
 
-.company-link:hover .company-icon .company-link:focus .company-icon {
+.company-link:hover .company-icon,
+.company-link:focus .company-icon {
   fill: var(--accent-color);
 }
 
-.company-link:hover .company-link:focus {
+.company-link:hover,
+.company-link:focus {
   border-color: var(--accent-color);
 }
 
@@ -583,11 +585,18 @@ img {
   border-bottom: 1px solid #eeeeee;
   border-left: 1px solid #eeeeee;
 }
+.help-card-list .item:hover,
+.help-card-list .item:focus {
+  box-shadow: 0px 1px 1px rgb(0 0 0 / 12%), 0px 4px 4px rgb(0 0 0 / 6%),
+    1px 4px 6px rgb(0 0 0 / 16%);
+  cursor: pointer;
+}
 
 .help-card-list {
   display: flex;
   flex-wrap: wrap;
 }
+
 .help-card-list img {
   display: block;
 }
@@ -621,8 +630,17 @@ img {
 
 .footer-items {
   display: flex;
+  align-items: baseline;
 }
 
 .footer-inf {
   margin-right: 70px;
+}
+
+.footer-social-link {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.footer-social-link .social-icon {
+  fill: white;
 }
